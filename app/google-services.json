@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "568530629490",
+    "firebase_url": "https://hindbhashi-d50f0.firebaseio.com",
+    "project_id": "hindbhashi-d50f0",
+    "storage_bucket": "hindbhashi-d50f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568530629490:android:2ddce952ccdd475a3463eb",
+        "android_client_info": {
+          "package_name": "com.superior.labs.hindbhashi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568530629490-20s613ukes9098iae5084130lsmt5qpd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.superior.labs.hindbhashi",
+            "certificate_hash": "a0fbdf19687a861e67d1c5058227e1a5e1c2c386"
+          }
+        },
+        {
+          "client_id": "568530629490-agl6poibjtjbkbl7s38s7p4snl9f582s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwHRTGgllbZgInZkj_edBPqv0Pj09xeN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568530629490-agl6poibjtjbkbl7s38s7p4snl9f582s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

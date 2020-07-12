@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewCatActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/vLay1"
+        android:layout_height="60dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/viewPostToolBar"
+            android:layout_height="60dp">
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/imgCat"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textCat"
+                android:layout_margin="10dp"
+                android:textSize="22sp"
+                app:fontFamily="cursive" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/vLay1"
+        android:layout_height="match_parent">
+
+
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mk_color="@color/colorRedN"
+            android:id="@+id/loadingViewCat"
+            android:layout_gravity="center"
+            app:mk_type="Whirlpool" />
+
+        <com.superior.labs.hindbhashi.VerticalViewPager
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/view_cat_pager">
+        </com.superior.labs.hindbhashi.VerticalViewPager>
+    </FrameLayout>
+
+</RelativeLayout>

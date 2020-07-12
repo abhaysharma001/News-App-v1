@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryFragment">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="100dp"
+        android:layout_height="match_parent">
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:text="श्रेणियाँ"
+        android:textSize="25sp"
+        android:textColor="@color/colorBlack"
+        android:layout_margin="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_height="110dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:src="@drawable/update"
+                android:layout_height="70dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:text="अपडेट"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_height="110dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:src="@drawable/trending"
+                android:layout_height="70dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:text="ट्रेंडिंग"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_height="110dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:src="@drawable/top"
+                android:layout_height="70dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:text="शीर्ष आलेख"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="मुख्य समाचार"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/shimmer_view_container"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="350dp"
+                android:id="@+id/cardShimmer"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+
+                    <FrameLayout
+                        android:layout_width="90dp"
+                        android:layout_height="90dp">
+                        <com.tuyenmonkey.mkloader.MKLoader
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            app:mk_color="@color/colorRedN"
+                            android:layout_gravity="center"
+                            app:mk_type="Whirlpool" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:scaleType="fitXY"
+                            android:layout_height="match_parent"/>
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGrey"
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp"
+                        android:textSize="16sp"
+                        app:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:background="@color/colorGrey"
+                android:id="@+id/techRecyclerView"
+                android:layout_height="120dp" />
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="विषय"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardUttarakhand"
+                android:layout_width="80dp"
+                app:cardCornerRadius="7dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nature" />
+
+                     <TextView
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:text="उत्तराखंड"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="7dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:id="@+id/cardCorona">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/virus"
+                        android:layout_height="50dp"/>
+
+                   <TextView
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:text="कोरोना"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="7dp"
+                android:id="@+id/cardPolitics">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/politics"
+                        android:layout_height="50dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:text="राजनीति"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="7dp"
+                android:id="@+id/cardBusiness">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/buiness"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:text="व्यापार"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="7dp"
+                android:id="@+id/cardTech">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tech"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                         android:textSize="18sp"
+                         android:layout_width="wrap_content"
+                         android:textStyle="bold"
+                         android:layout_gravity="center"
+                         android:textColor="#000000"
+                         android:layout_marginTop="5dp"
+                         android:text="प्रौद्योगिकी"
+                         android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="7dp"
+                android:id="@+id/cardSports">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/sports"
+                        android:layout_height="50dp"/>
+
+                                        <TextView
+                                            android:textSize="18sp"
+                                            android:layout_width="wrap_content"
+                                            android:textStyle="bold"
+                                            android:layout_gravity="center"
+                                            android:textColor="#000000"
+                                            android:layout_marginTop="5dp"
+                                            android:text="खेल"
+                                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="7dp"
+                android:id="@+id/cardScience">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/science"
+                        android:layout_height="50dp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:textStyle="bold"
+                                            android:textSize="18sp"
+                                            android:layout_gravity="center"
+                                            android:textColor="#000000"
+                                            android:layout_marginTop="5dp"
+                                            android:text="विज्ञान"
+                                            android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="7dp"
+                android:id="@+id/cardEntertainment">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/entertainment"
+                        android:layout_height="50dp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:textStyle="bold"
+                                            android:layout_gravity="center"
+                                            android:textColor="#000000"
+                                            android:paddingStart="3dp"
+                                            android:textSize="18sp"
+                                            android:layout_marginTop="5dp"
+                                            android:text="मनोरंजन"
+                                            android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="विविध"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_height="wrap_content"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorGrey"
+            android:layout_height="500dp">
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/shimmer_view_container2"
+                android:layout_height="match_parent">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="350dp"
+                    android:id="@+id/cardShimmer2"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+
+                        <FrameLayout
+                            android:layout_width="90dp"
+                            android:layout_height="90dp">
+                            <com.tuyenmonkey.mkloader.MKLoader
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                app:mk_color="@color/colorRedN"
+                                android:layout_gravity="center"
+                                app:mk_type="Whirlpool" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:scaleType="fitXY"
+                                android:layout_height="match_parent"/>
+
+                        </FrameLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGrey"
+                            android:layout_gravity="center"
+                            android:layout_margin="15dp"
+                            android:textSize="16sp"
+                            app:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/entertainmentRecyclerView"
+                    android:layout_height="500dp" />
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="#ट्रेंडिंग"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:background="@color/colorGrey"
+        android:id="@+id/trendingRecyclerView"
+        android:layout_height="280dp" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="वीडियो"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:videoId="Zw7RNg2pQlc"
+                app:autoPlay="false"
+                app:showFullScreenButton="false" />
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="#कोरोना"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:background="@color/colorGrey"
+            android:id="@+id/coronaRecyclerView"
+            android:layout_height="280dp" />
+<!--       <TextView
+            android:layout_width="match_parent"
+            android:text="#Entertainment"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_height="wrap_content"/>
+-->
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
